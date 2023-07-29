@@ -18,11 +18,10 @@ def random_sleep():
     time.sleep(sleep_duration)
 
 def deposit(min_val, max_val, pvt_key):
+	random_sleep()
 
 	if CHECK_GWEI == True:  # !RM
 		wait_gas()  # !RM смотрим газ, если выше MAX_GWEI, ждем #!RM
-
-	random_sleep()
 
 	web3 = Web3(Web3.HTTPProvider(RPC))
 	address = web3.eth.account.from_key(pvt_key).address
@@ -42,11 +41,10 @@ def deposit(min_val, max_val, pvt_key):
 	return print(f"{address} | Deposited {value_eth} ETH | Hash: {transaction_hash}")
 
 def deposit_swap(keep_value_from,keep_value_to,pvt_key):
+	random_sleep()
 
 	if CHECK_GWEI == True:  # !RM
 		wait_gas()  # !RM смотрим газ, если выше MAX_GWEI, ждем #!RM
-
-	random_sleep()
 
 	web3 = Web3(Web3.HTTPProvider(RPC))
 	address = web3.eth.account.from_key(pvt_key).address
@@ -69,11 +67,10 @@ def deposit_swap(keep_value_from,keep_value_to,pvt_key):
 
 
 def withdraw(pvt_key):
+	random_sleep()
 
 	if CHECK_GWEI == True:  # !RM
 		wait_gas()  # !RM смотрим газ, если выше MAX_GWEI, ждем #!RM
-
-	random_sleep()
 
 	web3 = Web3(Web3.HTTPProvider(RPC))
 	address = web3.eth.account.from_key(pvt_key).address
@@ -94,11 +91,10 @@ def withdraw(pvt_key):
 
 
 def withdraw_swap(keep_value_from, keep_value_to, pvt_key):
+	random_sleep()
 
 	if CHECK_GWEI == True:  # !RM
 		wait_gas()  # !RM смотрим газ, если выше MAX_GWEI, ждем #!RM
-
-	random_sleep()
 
 	web3 = Web3(Web3.HTTPProvider(RPC))
 	contract_balance = web3.from_wei(check_balance(pvt_key), "ether")
