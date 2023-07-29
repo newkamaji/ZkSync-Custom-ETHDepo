@@ -5,6 +5,8 @@
 CHECK_GWEI  = True # True / False. если True, тогда будем смотреть base gwei, и если он больше MAX_GWEI, скрипт будет ожидать снижения газа #!RM
 MAX_GWEI    = 16 # gas в gwei (смотреть здесь : https://etherscan.io/gastracker) #!RM
 
+RANDOM_WALLETS  = True # True / False
+
 from_sec = 1       #|Wait from N seconds between transactions | Минимальное значение "ждать от N sec между транзакиями". Для рандомного выбора
 to_sec = 100	   #|Wait to N seconds between transactions | Максиимальное значение "спать до N sec между транзакциями". Для рандомного выбора
 eth_min = 0.0001   #|Min ETH quantity for deposit | Значение ETH минимального депозита. Для рандомного выбора
