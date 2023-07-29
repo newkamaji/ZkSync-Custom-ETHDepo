@@ -26,6 +26,9 @@ def download_wallets():
 
 def main():
 	private_keys = download_wallets()
+
+	if RANDOM_WALLETS == True: random.shuffle(private_keys)
+	
 	zero = 0  # !RM
 	for key in private_keys:
 		try:
