@@ -7,6 +7,8 @@ MAX_GWEI    = 16 # gas в gwei (смотреть здесь : https://etherscan.
 
 RANDOM_WALLETS  = True # True / False
 
+RUN_FOREVER = True # True / False
+
 from_sec = 1       #|Wait from N seconds between transactions | Минимальное значение "ждать от N sec между транзакиями". Для рандомного выбора
 to_sec = 100	   #|Wait to N seconds between transactions | Максиимальное значение "спать до N sec между транзакциями". Для рандомного выбора
 eth_min = 0.0001   #|Min ETH quantity for deposit | Значение ETH минимального депозита. Для рандомного выбора
