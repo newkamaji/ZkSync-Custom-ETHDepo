@@ -58,7 +58,7 @@ def main():
 				print(f'{zero}/{len(private_keys)}')
 
 				if	swap_all_balance == True:
-					withdraw_swap(keep_value_from, keep_value_to, key)
+					withdraw_swap(keep_withdraw_value_from, keep_withdraw_value_to, key)
 				elif swap_all_balance == False:
 					withdraw(key)
 				else:
@@ -91,7 +91,7 @@ def main():
 
 	elif choice == 5: #DEPOSIT-WITHDRAW LOOP
 		Cycle = 1
-		while True:
+		while Cycle < MAX_CYCLE:
 
 			random.shuffle(private_keys)
 
@@ -125,7 +125,12 @@ def main():
 					zero += 1
 					print(f'{zero}/{len(private_keys)}')
 
-					withdraw(key)
+					if swap_all_balance == True:
+						withdraw_swap(keep_withdraw_value_from, keep_withdraw_value_to, key)
+					elif swap_all_balance == False:
+						withdraw(key)
+					else:
+						print("Something wrong with settings.py")
 
 				except Exception as e:
 					print(f"Transaction failed for private key: {key} | Error: {e}")
